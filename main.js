@@ -26,4 +26,3 @@ document.getElementById("calculate-button").addEventListener("click", function()
     document.getElementById("output").textContent = `If you were on ${planet}, you would weigh ${result}lbs!`;
 });
 
-console.log("Hello World! Test"); 
