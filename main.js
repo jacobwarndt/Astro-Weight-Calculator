@@ -15,6 +15,12 @@ const planetMultipliers = {
 document.getElementById("calculate-button").addEventListener("click", function() {
     const weight = parseFloat(document.getElementById("user-weight").value);
     const planet = document.getElementById("planets").value;
+
+    if (isNaN(weight) || weight <= 0) {
+        document.getElementById("output").textContent = "Please enter a valid weight.";
+        return;
+    }
+
     const multiplier = planetMultipliers[planet];
     const result = weight * multiplier;
     document.getElementById("output").textContent = `If you were on ${planet}, you would weigh ${result}lbs!`;
